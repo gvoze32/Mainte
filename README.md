@@ -1,4 +1,5 @@
-# Mainte
+![Mainte](https://i.postimg.cc/WpHmyggn/gambar-18.png)
+
 A simple and funcional conky theme for Manjaro x64 with ASUS laptop and KDE desktop environment.
 
 Born as a fork of "conky-bandithijodotcom" and i'm just fixing the code.
@@ -24,7 +25,7 @@ https://github.com/gvoze32/Mainte/archive/v1.0.zip
 ./conky-launch.sh
 ```
 
-To run when startup, just add conky-launch.sh to autostart menu.
+To automatically run when startup, just add conky-launch.sh to autostart menu.
 
 # Credits
 Source: https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew
