@@ -53,7 +53,7 @@ ${alignr}${offset -45}< ${exec cat /etc/locale.conf | grep "LANG=" | cut -d"\"" 
 ${alignr}${offset -45}│
 ${alignr}${offset -45}│
 ${voffset -10}
-${alignr}${offset -75}< ${exec sensors | grep "RPM" | cut -d" " -f9-} > Fan Speed ──────────┐
+${alignr}${offset -75}< ${exec sensors | grep "RPM" | cut -c14-25} > Fan Speed ──────────┐
 ${alignr}${offset -75}│
 ${alignr}${offset -75}│
 ${alignr}${offset -75}┌────── Temperatures ───────────────┤
