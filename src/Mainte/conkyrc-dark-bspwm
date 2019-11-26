@@ -3,7 +3,7 @@ conky.config = {
     font = 'FuraCode Nerd Font:pixelsize=9',
     use_xft = true,
     xftalpha = 1.0,
-    update_interval = 1,
+    update_interval = 4,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
@@ -20,9 +20,9 @@ conky.config = {
     draw_graph_borders = true,
     stippled_borders = 0,
     border_width = 0,
-    default_color = '#FFFFFF',
-    default_shade_color = '#FFFFFF',
-    default_outline_color = '#FFFFFF',
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
     alignment = 'top_left',
     gap_x = 763,
     gap_y = 65,
@@ -82,6 +82,7 @@ ${alignr}${offset -95}< ${exec acpi | grep "Battery 0" | awk '{print $4}'} | ${b
 ${voffset 25}
 ${alignr}${offset -60}Hard Drive ─────────────────┐
 ${alignr}${offset -70}< ${fs_used_perc}% > Root < ${color #BEC8CB}${fs_bar 5,120 /}${color} >${offset 10}│
+${alignr}${offset -70}< ${fs_used_perc /home}% > Home < ${color #BEC8CB}${fs_bar 5,120 /home}${color} >${offset 10}│
 ${alignr}${offset -10}< ${swapperc}% > Swap < ${color #BEC8CB}${swapbar 5,120}${color} >${offset 10}└────────────
 # ${alignr}${offset -640}volume: ${exec amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2 }'}
 

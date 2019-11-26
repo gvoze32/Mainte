@@ -3,7 +3,6 @@ conky.config = {
     font = 'Fantasque Sans Mono:size=10',
     use_xft = true,
     xftalpha = 0.5,
-    update_interval = 1,
     total_run_times = 0,
     own_window = true,
     own_window_transparent = true,
