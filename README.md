@@ -1,6 +1,6 @@
 ![Mainte](https://i.postimg.cc/WpHmyggn/gambar-18.png)
 
-A simple and funcional conky theme for all desktop environment. Born as a fork of "conky-bandithijodotcom".
+A simple and functional conky theme for all desktop environment. Born as a fork of "conky-bandithijodotcom".
 
 In this new version, all elements have been adjusted for Manjaro Linux KDE x64 with ASUS laptop. Match for 1366x768p screen resolution.
 
@@ -23,7 +23,7 @@ cd ~/home/.conky/Mainte
 
 *To automatically run when startup, just add conky-launch.sh to autostart menu.*
 
-# Credits
+# Credit
 
 - bandithijo
 
