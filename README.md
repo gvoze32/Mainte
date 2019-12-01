@@ -13,7 +13,7 @@ For those who want to try this conky theme, here’s a step by step how to setup
 ```
 sudo pacman -S conky-manager
 ```
-2. Download the conky theme via the link [here](https://github.com/gvoze32/Mainte/archive/v1.0.zip)
+2. Download Mainte theme from [Releases](https://github.com/gvoze32/Mainte/releases)
 
 3. Extract all folder and copy to ~/home/.conky (set hidden file to visible on your file manager cause the folder is hidden)
 
