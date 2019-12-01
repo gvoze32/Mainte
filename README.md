@@ -1,4 +1,6 @@
-![Mainte](https://i.postimg.cc/WpHmyggn/gambar-18.png)
+<p align="center">
+  <img src="https://i.ibb.co/BB729j1/fa7zthicvx141.png">
+</p>
 
 A simple and functional conky theme for all desktop environment. Born as a fork of "conky-bandithijodotcom".
 
