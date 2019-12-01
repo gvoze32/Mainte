@@ -2,7 +2,7 @@
   <img src="https://i.ibb.co/BB729j1/fa7zthicvx141.png">
 </p>
 
-A simple and functional conky theme for all desktop environment. Born as a fork of "conky-bandithijodotcom".
+A simple and functional conky theme for all desktop environment. Forked from "[conky-bandithijodotcom](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew)".
 
 In this new version, all elements have been adjusted for Manjaro Linux KDE x64 with ASUS laptop. Match for 1366x768p screen resolution.
 
@@ -15,7 +15,7 @@ sudo pacman -S conky-manager
 ```
 2. Download the conky theme via the link [here](https://github.com/gvoze32/Mainte/archive/v1.0.zip)
 
-3. Extract folder and copy to ~/home/.conky (set hidden file to visible on your file manager cause the folder is hidden)
+3. Extract all folder and copy to ~/home/.conky (set hidden file to visible on your file manager cause the folder is hidden)
 
 4. Open terminal and type
 ```
@@ -23,12 +23,10 @@ cd ~/home/.conky/Mainte
 ./conky-launch.sh
 ```
 
-*To automatically run when startup, just add conky-launch.sh to autostart menu.*
+*To automatically run when startup, just add conky-launch.sh to autostart.*
 
 # Credit
 
 - bandithijo
 
 - gvoze32
-
-Source: https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew
