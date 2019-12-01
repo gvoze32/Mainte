@@ -4,7 +4,7 @@
 
 A simple and functional conky theme for all desktop environment. Forked from "[conky-bandithijodotcom](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew)".
 
-In this new version, all elements have been adjusted for Manjaro Linux KDE x64 with ASUS laptop. Match for 1366x768p screen resolution.
+In this new version, all elements have been adjusted for Manjaro Linux KDE x64 with ASUS laptop. Match for 1366x768 screen resolution.
 
 # Usage
 For those who want to try this conky theme, here’s a step by step how to setup guide:
@@ -30,3 +30,5 @@ cd /home/$USER/.conky/Mainte
 - bandithijo
 
 - gvoze32
+
+- [Vector Graphic](https://www.reddit.com/r/thinkpad/search/?q=exploded%20wallpaper)
