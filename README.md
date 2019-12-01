@@ -31,4 +31,4 @@ cd /home/$USER/.conky/Mainte
 
 - gvoze32
 
-- [Vector Graphic](https://www.reddit.com/r/thinkpad/search/?q=exploded%20wallpaper)
+- [Vector](https://www.reddit.com/r/thinkpad/search/?q=exploded%20wallpaper&restrict_sr=1)
