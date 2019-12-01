@@ -15,7 +15,7 @@ sudo pacman -S conky-manager
 ```
 2. Download Mainte theme from [Releases](https://github.com/gvoze32/Mainte/releases)
 
-3. Extract all folder and copy to /home/$USER/.conky (set hidden file to visible on your file manager cause the folder is hidden)
+3. Extract all folder and copy to `/home/$USER/.conky` (set hidden file to visible on your file manager cause the folder is hidden)
 
 4. Open terminal and type
 ```
