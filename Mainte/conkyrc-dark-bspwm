@@ -24,7 +24,7 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'top_left',
-    gap_x = 763,
+    gap_x = 772,
     gap_y = 65,
     no_buffers = true,
     cpu_avg_samples = 2,
@@ -38,7 +38,7 @@ conky.config = {
 conky.text = [[
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
 ${alignr}${offset 250}--------------------------------
-${alignr}${offset 0}┌──────── ${nodename}${font} ─────────
+${alignr}${offset 0}┌──────── ${nodename}${font} ─────────────
 ${alignr}${offset -110}${uid_name 1000}${font} ──────┐
 ${alignr}${offset -110}< ${exec lsb_release -ds | sed 's/"//g'} > Distro ─┤
 ${alignr}${offset -110}< ${kernel} > Kernel ─┤
@@ -62,12 +62,12 @@ ${alignr}${offset -165}└─ Core1 < ${execi 5 sensors|grep 'Core 1'| awk -F'+'
 ${alignr}${offset -75}│
 ${alignr}${offset -75}│
 ${alignr}${offset -75}┌───── < ${execi 1000 cat /proc/cpuinfo|grep 'model name'|sed -e 's/model name.*: //'|uniq|cut -c 1-36|sed 's/(R)//g'|sed 's/(TM)//g'|sed 's/CPU     //g'} > ──────────┤
-${alignr}${offset -285}│${offset 210}│
-${alignr}${offset -220}└─── Processes${offset 145}│
-${alignr}${offset -135}< ${top name 1}  ${top cpu 1} >${offset 60}│
-${alignr}${offset -135}< ${top name 2}  ${top cpu 2} >${offset 60}│
-${alignr}${offset -135}< ${top name 3}  ${top cpu 2} >${offset 60}│
-${alignr}${offset -135}< ${top name 4}  ${top cpu 2} >${offset 60}│
+${alignr}${offset -325}│${offset 250}│
+${alignr}${offset -260}└─── Processes${offset 185}│
+${alignr}${offset -175}< ${top name 1}  ${top cpu 1} >${offset 100}│
+${alignr}${offset -175}< ${top name 2}  ${top cpu 2} >${offset 100}│
+${alignr}${offset -175}< ${top name 3}  ${top cpu 2} >${offset 100}│
+${alignr}${offset -175}< ${top name 4}  ${top cpu 2} >${offset 100}│
 ${alignr}${offset -75}│
 ${voffset 15}
 ${alignr}${offset -75}< $memperc% | $mem/$memmax ${color #BEC8CB}${membar 5,50}${color} > RAM ──────────┐
