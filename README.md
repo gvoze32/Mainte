@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/BB729j1/fa7zthicvx141.png">
+  <img src="https://i.ibb.co/f8kvVKf/gambar-18-2.png">
 </p>
 
 A simple and functional conky theme for all desktop environment. Forked from "[conky-bandithijodotcom](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew)".
