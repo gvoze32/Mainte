@@ -11,7 +11,7 @@ For those who want to try this conky theme, here’s a step by step how to setup
 
 1. First of all, open terminal and install conky if you don’t have it via command:
 ```
-sudo pacman -S conky-manager
+sudo pacman -S conky
 ```
 2. Download Mainte theme from [Releases](https://github.com/gvoze32/Mainte/releases)
 
@@ -25,7 +25,7 @@ cd /home/$USER/.conky/Mainte
 
 *To automatically run when startup, just add conky-launch.sh to autostart.*
 
-# Credit
+# Credits
 
 - bandithijo
 
