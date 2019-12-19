@@ -2,7 +2,7 @@
   <img src="https://i.ibb.co/RHcqFLx/Screenshot-20191202-223118.png">
 </p>
 
-A simple and functional conky theme for all desktop environment. Forked from "[conky-bandithijodotcom](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew)".
+A simple and functional conky theme for all desktop environment. Based on "[conky-bandithijodotcom](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew)".
 
 In this new version, all elements have been adjusted for Manjaro Linux KDE x64 with ASUS laptop. Match for 1366x768 screen resolution.
 
