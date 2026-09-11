@@ -1,0 +1,6 @@
+# Copy this file to mainte.local; that file is ignored by git.
+# Use an absolute path or a path relative to this repository.
+MAINTE_WALLPAPER="bg.png"
+
+# Enable the optional community-inspired overlay when wanted.
+# MAINTE_EXTRAS=1

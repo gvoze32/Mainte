@@ -1,0 +1,50 @@
+conky.config = {
+    background = false,
+    font = 'FiraCode Nerd Font Mono:size=10',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 5,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'dock',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+    own_window_colour = '#000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'bottom_right',
+    gap_x = 32,
+    gap_y = 32,
+    no_buffers = true,
+    use_spacer = 'none',
+    minimum_width = 640,
+    maximum_width = 1024,
+    minimum_height = 145,
+    override_utf8_locale = true,
+    default_bar_width = 110,
+    default_bar_height = 5,
+};
+
+conky.text = [[
+${if_match ${execi 30 ./mainte-features.sh available any} == 1}
+${alignr}┌──────── Community Extensions ──────────┐
+${if_match ${execi 30 ./mainte-features.sh available media} == 1}${alignr}< ${execi 5 ./mainte-features.sh media} > Media ─────────────┤
+${alignr}< ${color #BEC8CB}${execibar 5 ./mainte-features.sh media-percent}${color} > Playback ──────────┤
+${endif}${if_match ${execi 30 ./mainte-features.sh available bluetooth} == 1}${alignr}< ${execi 30 ./mainte-features.sh bluetooth} > Bluetooth ──────────┤
+${endif}${if_match ${execi 30 ./mainte-features.sh available usb} == 1}${alignr}< ${execi 30 ./mainte-features.sh usb} > USB ───────────────┤
+${endif}${if_match ${execi 30 ./mainte-features.sh available android} == 1}${alignr}< ${execi 30 ./mainte-features.sh android} > Android ────────────┤
+${endif}${if_match ${execi 30 ./mainte-features.sh available gpu} == 1}${alignr}< ${execi 30 ./mainte-features.sh gpu} > GPU ─────────────────┤
+${endif}${alignr}└─────────────────────────────────────────┘
+${endif}
+]];

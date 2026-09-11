@@ -1,0 +1,99 @@
+conky.config = {
+    background = false,
+    font = 'FiraCode Nerd Font Mono:size=10',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 2,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'dock',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+    own_window_colour = '#000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_right',
+    gap_x = 32,
+    gap_y = 40,
+    no_buffers = true,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    use_spacer = 'none',
+    minimum_width = 1024,
+    maximum_width = 1024,
+    minimum_height = 640,
+    uppercase = true,
+    override_utf8_locale = true,
+    default_bar_width = 110,
+    default_bar_height = 5,
+};
+
+conky.text = [[
+# Unicode box-drawing characters keep the original technical-drawing style.
+${if_match 0 == 1}mainte-layout: identity${endif}
+${voffset 0}
+${alignr}${offset 250}--------------------------------
+${alignr}┌──────── ${nodename} ─────────────
+${alignr}< ${execi 600 id -un} > User ──────┐
+${alignr}< ${execi 600 ./mainte-sysinfo.sh distro} > Distro ─┤
+${alignr}< ${kernel} > Kernel ─┤
+${alignr}< ${uptime_short} > Uptime ─┘
+${if_match 0 == 1}mainte-layout: graphics${endif}
+${voffset 0}
+${alignr}${offset -30}┌──────────
+${alignr}${offset -80}│
+${alignr}${offset -80}< ${execi 600 ./mainte-sysinfo.sh gpu} > GPU ────────────┘
+${alignr}${offset -150}< ${execi 600 ./mainte-sysinfo.sh resolution} > Resolution
+${if_match 0 == 1}mainte-layout: locale${endif}
+${voffset 10}
+${alignr}${offset -45}< ${execi 600 ./mainte-sysinfo.sh locale} > Locale ────────────────┐
+${alignr}${offset -45}│
+${alignr}${offset -45}│
+${if_match 0 == 1}mainte-layout: performance${endif}
+${voffset -10}
+${alignr}${offset -75}< ${execi 30 ./mainte-sysinfo.sh fan} > Fan Speed ──────────┐
+${alignr}${offset -75}│
+${alignr}${offset -75}│
+${alignr}${offset -75}┌────── Temperatures ───────────────┤
+${alignr}${offset -165}├─ Sensor 1 < ${execi 30 ./mainte-sysinfo.sh temperature 1} >${alignr}${offset -75}│
+${alignr}${offset -165}└─ Sensor 2 < ${execi 30 ./mainte-sysinfo.sh temperature 2} >${alignr}${offset -75}│
+${alignr}${offset -75}│
+${alignr}${offset -75}│
+${alignr}${offset -75}┌───── < ${execi 3600 ./mainte-sysinfo.sh cpu} > ──────────┤
+${alignr}${offset -325}│${offset 250}│
+${alignr}${offset -260}└─── Processes${offset 185}│
+${alignr}${offset -175}< ${top name 1}  ${top cpu 1} >${offset 100}│
+${alignr}${offset -175}< ${top name 2}  ${top cpu 2} >${offset 100}│
+${alignr}${offset -175}< ${top name 3}  ${top cpu 3} >${offset 100}│
+${alignr}${offset -175}< ${top name 4}  ${top cpu 4} >${offset 100}│
+${alignr}${offset -75}│
+${if_match 0 == 1}mainte-layout: memory${endif}
+${voffset 15}
+${alignr}${offset -75}< $memperc% | $mem/$memmax ${color #BEC8CB}${membar 5,50}${color} > RAM ──────────┐
+${alignr}${offset -75}│
+${if_match 0 == 1}mainte-layout: network${endif}
+${voffset 10}
+${alignr}${offset -75}< ${gw_iface} : ${addr} > Network ────────────┐
+${alignr}${offset -115}UP < ${color #BEC8CB}${upspeedgraph 15,130 BCC3C3 BCC3C3}${color} >${voffset -15}${offset 40}│
+${alignr}${offset -110}${voffset 10}DOWN < ${color #BEC8CB}${downspeedgraph 15,130 BCC3C3 BCC3C3}${color} >${voffset -25}${offset 40}└─
+${if_match 0 == 1}mainte-layout: battery${endif}
+${voffset 20}
+${alignr}${offset -75}${execi 30 ./mainte-sysinfo.sh battery} : Battery ───────────────────┐
+${alignr}${offset -95}< ${execi 30 ./mainte-sysinfo.sh battery-percent-text} >${if_match ${execi 30 ./mainte-sysinfo.sh battery-present} == 1} ${color #BEC8CB}${execibar 30 ./mainte-sysinfo.sh battery-percent}${color}${endif}
+${if_match 0 == 1}mainte-layout: storage${endif}
+${voffset 25}
+${alignr}${offset -60}Storage ─────────────────┐
+${alignr}${offset -70}< ${execi 300 ./mainte-sysinfo.sh storage root}% > Root < ${color #BEC8CB}${execibar 300 ./mainte-sysinfo.sh storage root}${color} >${offset 10}│
+${alignr}${offset -70}< ${execi 300 ./mainte-sysinfo.sh storage home}% > Home < ${color #BEC8CB}${execibar 300 ./mainte-sysinfo.sh storage home}${color} >${offset 10}└────────────
+]];
