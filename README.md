@@ -4,13 +4,45 @@
   <img src="https://i.ibb.co/RHcqFLx/Screenshot-20191202-223118.png" alt="Mainte Conky theme">
 </p>
 
-Mainte is a simple, functional Conky theme inspired by
+Mainte is a lightweight, functional Conky theme inspired by
 ["conky-bandithijodotcom"](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew).
 
-The base configuration is hardware-neutral. It does not assume a specific
-laptop brand, Linux distribution, desktop environment, network interface,
-battery slot, or CPU core count. Values that are not exposed by the system are
-shown as `N/A` instead of making Conky fail.
+The base configuration works across laptop brands, Linux distributions,
+desktop environments, network interfaces, battery layouts, and CPU counts.
+When a system does not expose a value, Mainte shows `N/A` instead of failing.
+
+## Install
+
+Welcome to Mainte. From a fresh checkout, run:
+
+```sh
+git clone https://github.com/gvoze32/Mainte.git
+cd Mainte
+./mainte install
+```
+
+This prepares the scripts and installs the pinned FiraCode Nerd Font. It does
+not start Conky. When you are ready to use the theme, run:
+
+```sh
+./mainte run
+```
+
+No internet connection? Use the offline setup, then start Mainte normally:
+
+```sh
+./mainte install --offline
+./mainte run
+```
+
+The launcher finds the project files automatically, so you do not need to
+copy the repository to `~/.conky/Mainte`.
+
+For desktop autostart, add the absolute path to `mainte` with `run` as its
+argument. The launcher starts the artwork and information overlay together.
+The historical `conkyrc-dark-bspwm` filename remains, but it contains no
+bspwm-specific commands.
+
 
 ## Features
 
@@ -54,44 +86,6 @@ The optional extension overlay detects these providers independently:
 | `lsusb`        | USB device inventory                   |
 | `adb`          | Connected Android devices              |
 | `nvidia-smi`   | NVIDIA utilization, memory, temperature |
-
-## Installation
-
-Install and run are separate commands:
-
-```sh
-git clone https://github.com/gvoze32/Mainte.git
-cd Mainte
-./mainte install
-./mainte run
-```
-
-`./mainte install` prepares executable permissions and downloads the pinned
-[FiraCode Nerd Font release](https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.5.1)
-over HTTPS, verifying its SHA-256 checksum before installing
-`FiraCode Nerd Font Mono`. It never starts Conky.
-
-On an offline machine, skip the font download:
-
-```sh
-./mainte install --offline
-./mainte run
-```
-
-The command entrypoint also keeps the other actions discoverable:
-
-```sh
-./mainte run --extensions
-./mainte layout
-```
-
-The launcher resolves its own directory, so the project does not need to be
-copied to `~/.conky/Mainte`. To start Mainte with your desktop session, add
-the absolute path to `mainte` with `run` as its argument to your desktop
-environment's autostart applications.
-
-The launcher starts `conkyrc-dark-bg` and `conkyrc-dark-bspwm`. The latter
-keeps its historical filename; it contains no bspwm-specific commands.
 
 ## Per-machine exploded wallpaper
 
