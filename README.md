@@ -57,29 +57,38 @@ The optional extension overlay detects these providers independently:
 
 ## Installation
 
-Clone the repository and run one setup command:
+Install and run are separate commands:
 
 ```sh
 git clone https://github.com/gvoze32/Mainte.git
 cd Mainte
-sh install.sh --start
+./mainte install
+./mainte run
 ```
 
-`sh install.sh` prepares executable permissions and downloads the pinned
+`./mainte install` prepares executable permissions and downloads the pinned
 [FiraCode Nerd Font release](https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.5.1)
 over HTTPS, verifying its SHA-256 checksum before installing
-`FiraCode Nerd Font Mono`. Add `--start` to launch Mainte immediately. The
-runtime never downloads anything.
+`FiraCode Nerd Font Mono`. It never starts Conky.
 
-If the machine is offline, use `sh install.sh --offline --start`. Mainte then
-uses the configured font fallback; you can change both Conky files' `font`
-values to any locally installed monospace font, for example
-`monospace:size=10`.
+On an offline machine, skip the font download:
+
+```sh
+./mainte install --offline
+./mainte run
+```
+
+The command entrypoint also keeps the other actions discoverable:
+
+```sh
+./mainte run --extensions
+./mainte layout
+```
 
 The launcher resolves its own directory, so the project does not need to be
 copied to `~/.conky/Mainte`. To start Mainte with your desktop session, add
-the absolute path to `conky-launch.sh` to your desktop environment's
-autostart applications.
+the absolute path to `mainte` with `run` as its argument to your desktop
+environment's autostart applications.
 
 The launcher starts `conkyrc-dark-bg` and `conkyrc-dark-bspwm`. The latter
 keeps its historical filename; it contains no bspwm-specific commands.
@@ -90,7 +99,7 @@ The artwork is intentionally separate from the hardware data. Each laptop can
 use its own exploded-view image without changing the global overlay:
 
 ```sh
-./conky-launch.sh "$HOME/Pictures/thinkpad-t470-exploded.png"
+./mainte run "$HOME/Pictures/thinkpad-t470-exploded.png"
 ```
 
 The path may also be configured persistently:
@@ -111,7 +120,7 @@ your asset uses a different aspect ratio.
 Use the interactive selector instead of editing the Conky text:
 
 ```sh
-./mainte-layout.sh
+./mainte layout
 ```
 
 Choose a named section (`Identity`, `Graphics`, `Locale`, `Performance`,
@@ -124,7 +133,7 @@ configuration automatically.
 Reset every section to the original positions with:
 
 ```sh
-./mainte-layout.sh --reset
+./mainte layout --reset
 ```
 
 ## Optional community extensions
@@ -133,7 +142,7 @@ Enable the portable subset inspired by
 [modified-mainte](https://github.com/AyoItsYas/modified-mainte):
 
 ```sh
-./conky-launch.sh --extensions
+./mainte run --extensions
 ```
 
 Or set `MAINTE_EXTRAS=1` in `mainte.local`. The extra overlay uses a bottom
@@ -181,15 +190,14 @@ To inspect the hardware adapter directly:
 - **The network graph is empty:** Conky uses the default network interface.
   Check that the session has a default route and that Conky can access the
   display session.
-- **The artwork and text overlap:** start Mainte through `conky-launch.sh` so
-  both windows receive identical positioning. Use the wallpaper argument
-  instead of editing the tracked artwork.
+- **The artwork and text overlap:** run `./mainte layout` to adjust the named
+  section instead of editing Conky files. Start through `./mainte run` so both
+  windows receive identical positioning.
 - **The extension overlay is not visible:** run
   `./mainte-features.sh available any`; `0` means no optional provider is
   installed. On short displays, the bottom-anchored panel may also be outside
   the visible area.
-- **Permission denied:** run `chmod +x conky-launch.sh mainte-sysinfo.sh
-  mainte-features.sh`.
+- **Permission denied:** run `sh install.sh` to restore executable permissions.
 
 ## Credits
 

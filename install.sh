@@ -12,19 +12,17 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
 usage() {
     printf '%s\n' \
-        'Usage: sh install.sh [--offline|--online] [--start]' \
+        'Usage: sh install.sh [--offline|--online]' \
         '' \
         'Default mode downloads the pinned FiraCode Nerd Font over HTTPS.' \
-        'Use --offline to skip the font download; --start launches Mainte after setup.'
+        'Use --offline to skip the font download; run ./mainte run to start Mainte.'
 }
 
 MODE=online
-START=0
 while [ "$#" -gt 0 ]; do
     case "$1" in
         --online) MODE=online ;;
         --offline) MODE=offline ;;
-        --start) START=1 ;;
         --help)
             usage
             exit 0
@@ -43,6 +41,7 @@ chmod 755 \
     "$SCRIPT_DIR/mainte-sysinfo.sh" \
     "$SCRIPT_DIR/mainte-features.sh" \
     "$SCRIPT_DIR/mainte-layout.sh" \
+    "$SCRIPT_DIR/mainte" \
     "$SCRIPT_DIR/install.sh"
 
 if [ "$MODE" = offline ]; then
@@ -110,8 +109,4 @@ else
     printf '%s\n' 'Conky is not installed yet; install it before starting Mainte.'
 fi
 
-if [ "$START" -eq 1 ]; then
-    exec "$SCRIPT_DIR/conky-launch.sh"
-fi
-
-printf '%s\n' 'Setup complete. Start Mainte with: ./conky-launch.sh'
+printf '%s\n' 'Setup complete. Run Mainte with: ./mainte run'
