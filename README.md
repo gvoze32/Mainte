@@ -43,7 +43,6 @@ argument. The launcher starts the artwork and information overlay together.
 The historical `conkyrc-dark-bspwm` filename remains, but it contains no
 bspwm-specific commands.
 
-
 ## Features
 
 - Host, user, distribution, kernel, uptime, GPU, display, and locale details.
