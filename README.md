@@ -161,9 +161,15 @@ sh providers/features.sh dns
 | `providers/`            | Hardware and extension adapters called by Conky        |
 | `assets/`               | Default artwork (`bg.png`) and its GIMP source         |
 | `mainte.local.example`  | Documented per-machine settings                        |
+| `LICENSE`               | MIT license text                                       |
 
 ## Credits
 
 - [bandithijo](https://mega.nz/#!y8JTFAYD!siXwByZVpZAQUfpocT46M1aMRUP9Qfs5mjCnumCA-ew)
 - [ThinkPad exploded-view vector source](https://www.reddit.com/r/thinkpad/search/?q=exploded%20wallpaper&restrict_sr=1)
 - [AyoItsYas/modified-mainte](https://github.com/AyoItsYas/modified-mainte)
+
+## License
+
+[MIT](LICENSE) © 2026 gvoze32. Third-party artwork listed under
+[Credits](#credits) remains under its authors' terms.
