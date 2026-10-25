@@ -1,6 +1,29 @@
-# Copy this file to mainte.local; that file is ignored by git.
-# Use an absolute path or a path relative to this repository.
-MAINTE_WALLPAPER="bg.png"
+# Mainte per-machine settings. `mainte install` copies this file to the
+# git-ignored mainte.local; uncomment what you want to change, then run
+# `mainte reload` (or `mainte run`). Paths may be absolute, start with ~/,
+# or be relative to the Mainte folder.
 
-# Enable the optional community-inspired overlay when wanted.
+# Your own exploded-view artwork (PNG or JPEG) and the box it is scaled to.
+# MAINTE_WALLPAPER="~/Pictures/thinkpad-t470-exploded.png"
+# MAINTE_WALLPAPER_SIZE=280x679
+
+# Distance of the artwork's top-right corner from the screen's top-right corner.
+# MAINTE_GAP_X=60
+# MAINTE_GAP_Y=40
+
+# Text and graph colour.
+# MAINTE_COLOR=BEC8CB
+
+# Detected automatically; set only to override.
+# MAINTE_NET_IFACE=wlan0
+# MAINTE_BATTERY=BAT0
+
+# Optional extensions panel: CPU, gateway, DNS, plus vnstat traffic, media,
+# Bluetooth, USB, Android, and NVIDIA/AMD GPU rows when those tools exist.
 # MAINTE_EXTRAS=1
+
+# Weather row in the extensions panel, fetched from wttr.in (no API key).
+# MAINTE_WEATHER="Jakarta"
+
+# Where `mainte layout` stores its offsets (one file per artwork if you like).
+# MAINTE_LAYOUT_FILE=mainte.layout
